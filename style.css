@@ -54,18 +54,18 @@ body {
 .nav__link:hover {
   border-bottom: 1px solid #008139;
 }
-.nav__phone{
+.nav__phone {
   display: flex;
   flex-direction: column;
 }
-c{
+c {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
   color: black;
   position: relative;
 }
-.nav__phone-link::before{
+.nav__phone-link::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -76,8 +76,17 @@ c{
   left: -26px;
   top: 3px;
 }
-.nav__phone-link{
+.nav__phone-link {
   font-size: 13px;
   line-height: 15px;
   color: #7d808a;
+}
+.hero__title {
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 57px;
+  line-height: 107%;
+  padding-top: 99px;
+  max-width: 613px;
 }
