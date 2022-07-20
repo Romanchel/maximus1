@@ -3,46 +3,77 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 ol,
 ul,
 menu {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
+
 .container {
   max-width: 1200px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.title {
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 36px;
+  text-align: center;
+}
+
 .hero {
   height: 100vh;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  margin-bottom: 90px;
 }
+
+.nav__wraper {
+  display: flex;
+  align-items: center;
+}
+
 .nav__list {
   display: flex;
+  margin-right: 55px;
 }
+
 .nav__item {
   margin-right: 40px;
 }
+
 .nav__list:last-child {
   margin-right: 0;
 }
+
 .nav__link {
   font-weight: 400;
   font-size: 13px;
@@ -51,13 +82,16 @@ body {
   text-transform: uppercase;
   border-bottom: 1px solid transparent
 }
+
 .nav__link:hover {
   border-bottom: 1px solid #008139;
 }
+
 .nav__phone {
   display: flex;
   flex-direction: column;
 }
+
 c {
   font-weight: 700;
   font-size: 18px;
@@ -65,6 +99,7 @@ c {
   color: black;
   position: relative;
 }
+
 .nav__phone-link::before {
   content: "";
   position: absolute;
@@ -76,17 +111,78 @@ c {
   left: -26px;
   top: 3px;
 }
+
 .nav__phone-link {
   font-size: 13px;
   line-height: 15px;
   color: #7d808a;
 }
+
+.nav__phone-text {
+  font-size: 13px;
+  line-height: 15px;
+  color: #7D808A;
+
+}
+
 .hero__title {
   font-family: 'Philosopher';
-  font-style: normal;
   font-weight: 700;
   font-size: 57px;
   line-height: 107%;
-  padding-top: 99px;
-  max-width: 613px;
+  max-width: 615px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.hero__subtitle {
+  max-width: 400px;
+  width: 100%;
+  font-family: 'Alegreya Sans';
+  font-size: 24px;
+  line-height: 140%;
+  color: #646464;
+  padding-left: 45px;
+  position: relative;
+}
+
+.hero__subtitle span {
+  font-weight: 700;
+}
+
+.hero__subtitle::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 1px;
+  background-color: #8F8F8F;
+  left: 0;
+  top: 16px;
+}
+
+.hero__batton {
+  cursor: pointer;
+  border: none;
+  padding: 20px 75px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 32px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #6A5300;
+  background: linear-gradient(180deg, #9BCFFF 0%, #FFF383 0.01%, #FFC700 100%);
+  box-shadow: 0px 4px 0px #C89C00;
+  border-radius: 5px;
+}
+
+.hero__batton:hover {
+  background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
+}
+
+.hero__batton:active {
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+.container__1__text__img{
+  display: flex;
 }
