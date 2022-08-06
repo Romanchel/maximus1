@@ -181,8 +181,122 @@ c {
 }
 
 .hero__batton:active {
-  transform: matrix(1, 0, 0, -1, 0, 0);
+  background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
 }
-.container__1__text__img{
+
+
+/* _____________________________________________________----------------------------------------------------------------------------------------------------------------------__ */
+/* about  */
+.about {
+  margin-bottom: 45px;
+}
+
+.about__title {
+  margin-bottom: 90px;
+}
+
+.about__inner {
   display: flex;
+  align-items: center;
+}
+
+.about__img {
+  margin-right: 30px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.about__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 60px;
+  grid-row-gap: 25px;
+  max-width: 540px;
+  width: 100%;
+}
+
+.about__number {
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 160%;
+  color: #008139;
+}
+
+.about__item-text {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  color: #0B0B0B;
+}
+
+.about__description {
+  font-size: 15px;
+  line-height: 28px;
+  color: #7E7E7E;
+
+}
+
+/*  */
+/* winer                      ---------------------------------------------------------------------------------------------------------------------------------------*/
+/*  */
+
+.winner--title {
+  margin-bottom: 25px;
+}
+
+.winner__list {
+  padding: 75px 0 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}
+
+.winner__item {
+  padding-top: 120px;
+  position: relative;
+}
+
+.winner__item::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 125px;
+  width: 125px;
+
+}
+.winner__item--point::before{
+  background-image: url(./img/point\ 1.png);
+}
+.winner__item--table::before{
+  background-image: url(./img/table\ 4.png);
+}
+.winner__item--clock::before{
+  background-image: url(./img/clock\ 1.png);
+}
+.winner__item--car::before{
+  background-image: url(./img/car.png);
+}
+.winner__title {
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 22px;
+  text-align: center;
+  color: #0B0B0B;
+}
+
+
+
+.winner__description {
+  font-size: 15px;
+  line-height: 151.7%;
+  text-align: center;
+  color: #7E7E7E;
 }
