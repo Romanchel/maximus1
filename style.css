@@ -271,18 +271,23 @@ c {
   width: 125px;
 
 }
-.winner__item--point::before{
+
+.winner__item--point::before {
   background-image: url(./img/point\ 1.png);
 }
-.winner__item--table::before{
+
+.winner__item--table::before {
   background-image: url(./img/table\ 4.png);
 }
-.winner__item--clock::before{
+
+.winner__item--clock::before {
   background-image: url(./img/clock\ 1.png);
 }
-.winner__item--car::before{
+
+.winner__item--car::before {
   background-image: url(./img/car.png);
 }
+
 .winner__title {
   margin-bottom: 25px;
   font-weight: 500;
@@ -299,4 +304,89 @@ c {
   line-height: 151.7%;
   text-align: center;
   color: #7E7E7E;
+}
+
+/*  */
+/* --------------------------visitors_____________---------------------------------------------------- */
+/*  */
+
+.visitors {
+  padding: 150Px 0 250px;
+}
+
+.visitors--container {
+  max-width: 1920px;
+  padding: 0;
+}
+
+.visitors--title {
+  margin-bottom: 70px;
+}
+
+.visitors__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.visitors__bg {
+  display: none;
+}
+
+.visitors__bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0, 35);
+}
+
+.visitors__bg::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-image: url(./img/visitors/Rectangle\ 138.svg);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.visitors__item:hover .visitors__bg {
+  display: block;
+}
+
+.visitors__img {
+  max-width: 375px;
+  width: 100%;
+  height: 100%;
+}
+
+/*    */
+/* -------------------------------------------------------------------------horsers------------------------------------ */
+/*  */
+
+.horses--title {
+  margin-bottom: 70px;
+}
+
+.horses__list {
+  display: flex;
+}
+
+.horses__item {
+  padding: 0 25px 45px 25px;
+  border: 1px solid floralwhite;
+  box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.horses__img {
+  margin-top: -25px;
 }
