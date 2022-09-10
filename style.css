@@ -426,21 +426,21 @@ c {
   gap: 5px;
 }
 
-.visitors__bg {
+.visitors_bg {
   display: none;
 }
 
-.visitors__bg::before {
+.visitors_bg::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0, 35);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
-.visitors__bg::after {
+.visitors_bg::after {
   content: "";
   position: absolute;
   width: 35px;
@@ -451,7 +451,7 @@ c {
   transform: translate(-50%, -50%);
 }
 
-.visitors__item:hover .visitors__bg {
+.visitors__item:hover .visitors_bg {
   display: block;
 }
 
@@ -461,6 +461,28 @@ c {
   height: 100%;
 }
 
+@media screen and (max-width: 992px) {
+  .visitors__list{
+    grid-template-columns: repeat(4,1fr);
+  }
+  .visitors__item:nth-child(9){
+    display: none;
+  }
+  .visitors__item:nth-child(10){
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .visitors{
+    padding: 50px 0 50px;
+  }
+  .visitors__list{
+    grid-template-columns: repeat(3,1fr);
+  }
+  .visitors__item:nth-child(9){
+    display: block;
+  }
+}
 /*    */
 /* -------------------------------------------------------------------------horsers------------------------------------ */
 /*  */
@@ -520,6 +542,52 @@ c {
   line-height: 21px;
   text-align: center;
   color: #7e7e7e;
+}
+@media screen and (max-width: 992px) {
+  .horses__img{
+    margin-top: -20px;
+    max-width: 240px;
+  }
+  .horses__item{
+    min-width: 290px;
+    padding: 0 25px 25px;
+  }
+  .horses__title{
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .horses__description{
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .horses__img{
+    max-width: 210px;
+  }
+  .horses__item{
+    min-width: 250px;
+    padding: 0 20px 20px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .horses__img{
+    max-width: 190px;
+  }
+  .horses__item{
+    min-width: 220px;
+    padding: 0 15px 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .horses__img{
+    max-width: 230px;
+  }
+  .horses__item{
+    min-width: 260px;
+    padding: 0 15px 15px;
+  }
 }
 /*  */
 /* -----------------------------------------------------f----------------------------- */
