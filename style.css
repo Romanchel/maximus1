@@ -33,6 +33,30 @@ body {
   margin: 0 auto;
 }
 
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 20px 75px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 32px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #6a5300;
+  background: linear-gradient(180deg, #9bcfff 0%, #fff383 0.01%, #ffc700 100%);
+  box-shadow: 0px 4px 0px #c89c00;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background: linear-gradient(180deg, #9bcfff 0%, #ffe456 0.01%, #ffb800 100%);
+}
+ 
+.button:active {
+  background: linear-gradient(180deg, #9bcfff 0%, #ffe456 0.01%, #ffb800 100%);
+}
+
 .title {
   font-family: "Philosopher";
   font-style: normal;
@@ -105,6 +129,15 @@ c {
   line-height: 21px;
   color: black;
   position: relative;
+} 
+
+.nav__phone-link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #7d808a;
+  position: relative;
+  margin-bottom: 8px;
 }
 
 .nav__phone-link::before {
@@ -113,17 +146,13 @@ c {
   width: 16px;
   height: 16px;
   background-size: contain;
-  background-image: url(./img/phon.svg);
+  background-image: url(./img/phone.svg);
   background-repeat: no-repeat;
   left: -26px;
   top: 3px;
 }
 
-.nav__phone-link {
-  font-size: 13px;
-  line-height: 15px;
-  color: #7d808a;
-}
+
 
 .nav__phone-text {
   font-size: 13px;
@@ -166,29 +195,6 @@ c {
   top: 16px;
 }
 
-.hero__batton {
-  cursor: pointer;
-  border: none;
-  padding: 20px 75px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 32px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: #6a5300;
-  background: linear-gradient(180deg, #9bcfff 0%, #fff383 0.01%, #ffc700 100%);
-  box-shadow: 0px 4px 0px #c89c00;
-  border-radius: 5px;
-}
-
-.hero__batton:hover {
-  background: linear-gradient(180deg, #9bcfff 0%, #ffe456 0.01%, #ffb800 100%);
-}
- 
-.hero__batton:active {
-  background: linear-gradient(180deg, #9bcfff 0%, #ffe456 0.01%, #ffb800 100%);
-}
 
 @media screen and (max-width: 992px) {
   .hero {
@@ -425,12 +431,15 @@ c {
   grid-template-columns: repeat(5, 1fr);
   gap: 5px;
 }
-
-.visitors_bg {
+.visitors__item{
+  position: relative;
+  cursor: pointer;
+}
+.visitors__bg {
   display: none;
 }
 
-.visitors_bg::before {
+.visitors__bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -440,18 +449,20 @@ c {
   background-color: rgba(0, 0, 0, 0.35);
 }
 
-.visitors_bg::after {
+.visitors__bg::after {
   content: "";
   position: absolute;
   width: 35px;
   height: 35px;
-  background-image: url(./img/visitors/Rectangle\ 138.svg);
+  background-image: url(./img/visitors/zoom.svg);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.visitors__item:hover .visitors_bg {
+.visitors__item:hover .visitors__bg {
   display: block;
 }
 
@@ -592,16 +603,16 @@ c {
 /*  */
 /* -----------------------------------------------------f----------------------------- */
 /*  */
-.qusetion {
+.question{
   padding: 140px 0 90px;
 }
-.question__form {
+.question__form{
   margin-left: auto;
   max-width: 470px;
   width: 100%;
   padding: 60px;
   background-color: #ffffff;
-  border: 1px solidc#caeaea;
+  border: 1px solid #caeaea;
   box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.11);
   border-radius: 5px;
   position: relative;
@@ -623,8 +634,15 @@ c {
   font-size: 35px;
   line-height: 35px;
   text-align: center;
-  color: #7e7e7e;
-  margin-bottom: 30px;
+  color: #363434;
+  margin-bottom: 15px;
+}
+.question__description{
+font-size: 15px;
+line-height: 21px;
+text-align: center;
+color: #7e7e7e;
+margin-bottom: 30px;
 }
 .question__input {
   border: 1px solid #8f8f8f;
@@ -638,16 +656,33 @@ c {
   width: 100%;
   margin-bottom: 30px;
 }
-
-.qusetion__lable-checkbox {
-  widows: 20px;
+.question__checkbox{
+  width: 0;
+  position: relative;
+}
+.question__checkbox::before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 15px;
+  top: 0;
+  left: 1px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1;
+}
+.qusetion__checkbox + .qusetion__lable-checkbox{
+  user-select: none;
+}
+.question__lable-checkbox {
+  width: 20px;
   height: 20px;
   border: 2px solid #ffc700;
   border-radius: 2px;
   position: relative;
 }
-.qusetion__checkbox:checked.qusetion__checkbox::before {
-  background-image: url();
+.question__checkbox:checked.question__checkbox::before {
+  background-image: url(./img/chekbox.svg);
 }
 .question__inner {
   display: flex;
@@ -808,7 +843,7 @@ c {
   background-image: url(./img/pin.svg);
 }
 .contacts__item--phone::before {
-  background-image: url(./img/phone.svg);
+  background-image: url(./img/phone__yellow.svg);
 }
 .contacts__item--mail::before {
   background-image: url(./img/gimail.svg);
