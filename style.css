@@ -146,7 +146,7 @@ c {
   width: 16px;
   height: 16px;
   background-size: contain;
-  background-image: url(./img/phone.svg);
+  background-image: url(./img/hero/hero__phone.svg);
   background-repeat: no-repeat;
   left: -26px;
   top: 3px;
@@ -354,19 +354,19 @@ c {
 }
 
 .winner__item--point::before {
-  background-image: url(./img/point\ 1.png);
+  background-image: url(./img/winner/point\ 1.png);
 }
 
 .winner__item--table::before {
-  background-image: url(./img/table\ 4.png);
+  background-image: url(./img/winner/table\ 4.png);
 }
 
 .winner__item--clock::before {
-  background-image: url(./img/clock\ 1.png);
+  background-image: url(./img/winner/clock\ 1.png);
 }
 
 .winner__item--car::before {
-  background-image: url(./img/car.png);
+  background-image: url(./img/winner/car.png);
 }
 
 .winner__title {
@@ -625,7 +625,7 @@ c {
   right: -130px;
   bottom: -150px;
   background-repeat: no-repeat;
-  background-image: url(./img/bav.png);
+  background-image: url(./img/question/bav.png);
   z-index: 2;
   background-size: contain;
 }
@@ -682,7 +682,7 @@ margin-bottom: 30px;
   position: relative;
 }
 .question__checkbox:checked.question__checkbox::before {
-  background-image: url(./img/chekbox.svg);
+  background-image: url(./img/question/chekbox.svg);
 }
 .question__inner {
   display: flex;
@@ -728,7 +728,7 @@ margin-bottom: 30px;
   right: 45px;
   background-repeat: no-repeat;
   background-size: contain;
-  background: url(./img/quote.svg);
+  background: url(./img/comments/quote.svg);
 }
 .comments__descripion {
   font-size: 15px;
@@ -792,9 +792,33 @@ margin-bottom: 30px;
   height: 18px;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(./img/instagram.svg);
+  background-image: url(./img/comments/instagram.svg);
 }
-
+@media screen and (max-width: 768px) {
+  .comments__list{
+    flex-wrap: wrap;
+  }
+  .comments__item{
+    padding: 20px 25px 15px;
+  }
+  .comments__item:first-child{
+    margin-right: 0px;
+    margin-bottom: 25px;
+  }
+  .comments__item::before{
+    width: 33px;
+    height: 27px;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 480px) {
+  .comments__item::before{
+    width: 33px;
+    height: 27px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
 /* --------------------------------------------------------------------------------------------- */
 /* ---------------------------------------contacts-------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------- */
@@ -840,16 +864,16 @@ margin-bottom: 30px;
   left: 0;
 }
 .contacts__item--pin::before {
-  background-image: url(./img/pin.svg);
+  background-image: url(./img/contacts/pin.svg);
 }
 .contacts__item--phone::before {
-  background-image: url(./img/phone__yellow.svg);
+  background-image: url(./img/contacts/phone__yellow.svg);
 }
 .contacts__item--mail::before {
-  background-image: url(./img/gimail.svg);
+  background-image: url(./img/contacts/gimail.svg);
 }
 .contacts__item--clock::before {
-  background-image: url(./img/clock.svg);
+  background-image: url(./img/contacts/clock.svg);
 }
 .contacts__adress-item {
   margin-bottom: 5px;
@@ -879,13 +903,13 @@ margin-bottom: 30px;
   background-size: contain;
 }
 .contact__social-link--instagram::before {
-  background-image: url(./img/instagram122.svg);
+  background-image: url(./img/contacts/instagram122.svg);
 }
 .contact__social-link--youtube::before {
-  background-image: url(./img/youtube112.svg);
+  background-image: url(./img/contacts/youtube112.svg);
 }
 .contact__social-link--whatsapp::before {
-  background-image: url(./img/Rectangle2.svg);
+  background-image: url(./img/contacts/whathop.svg);
 }
 .contact__social-link {
   width: 30px;
